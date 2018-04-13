@@ -71,6 +71,7 @@ export class GastosrealizadosmovizeneditComponent implements OnInit {
   onDelete() {
     this.gastosRealizadosMovizenService.deleteIngredient(this.editedItemIndex);
     this.onClear();
+    this.onSaveData();
     this.editMode = false;
   }
 

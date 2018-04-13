@@ -24,12 +24,5 @@ export class DataStoregeService {
       );
   }
 
-  /*deleteingredient() {
-    this.Http.delete('https://ejerciciomovizen.firebaseio.com/.json')
-      .subscribe(
-        (ingredients: Ingredient[]) => {
-          this.gastosRealizadosService.deleteIngredient(1);
-        }
-      );
-  }*/
+
 }
