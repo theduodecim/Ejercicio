@@ -2,6 +2,7 @@ import {Subject} from 'rxjs/Subject';
 import {Ingredient} from "../../model/ingredient.model";
 import {Injectable} from "@angular/core";
 
+
 @Injectable()
 export class GastosrealizadosmovizenService {
   ingredientsChanged = new Subject<Ingredient[]>();
@@ -11,11 +12,7 @@ export class GastosrealizadosmovizenService {
     new Ingredient('Bananas', 4, 25 , 100)
   ];
   constructor() {
-
   }
-
-
-
 
   getIncredients() {
     return this.ingredients.slice();
@@ -31,6 +28,11 @@ export class GastosrealizadosmovizenService {
 
   }
 
+  SetIngredients(ingredient: Ingredient[]) {
+    this.ingredients = ingredient;
+    this.ingredientsChanged.next(this.ingredients.slice());
+  }
+
 
   updateIngredient(index: number, newIngredient: Ingredient) {
     this.ingredients[index] = newIngredient;
@@ -41,7 +43,6 @@ export class GastosrealizadosmovizenService {
     this.ingredients.splice(index, 1);
     this.ingredientsChanged.next(this.ingredients.slice());
   }
-
 
 
 }

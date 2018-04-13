@@ -5,6 +5,8 @@ import {routing} from "./router-M";
 import {GastosRealizadosM} from "./component/gastosrealizadosmovizen/gastosrealizados-M";
 import {GastosrealizadosmovizenService} from "./component/gastosrealizadosmovizen/gastosrealizadosmovizen.service";
 import {LocalStorageModule} from "angular-2-local-storage";
+import {DataStoregeService} from "./services/datastorage.service";
+import {HttpClientModule} from "@angular/common/http";
 
 
 
@@ -19,10 +21,12 @@ import {LocalStorageModule} from "angular-2-local-storage";
     BrowserModule,
     routing,
     GastosRealizadosM,
-    LocalStorageModule
+    LocalStorageModule,
+    HttpClientModule
   ],
   providers: [
     GastosrealizadosmovizenService,
+    DataStoregeService
   ],
   bootstrap: [AppComponent]
 })
