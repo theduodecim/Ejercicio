@@ -10,7 +10,12 @@ export class GastosrealizadosmovizenService {
     new Ingredient('Manzanas', 2 , 50 , 100),
     new Ingredient('Bananas', 4, 25 , 100)
   ];
-  constructor() {}
+  constructor() {
+
+  }
+
+
+
 
   getIncredients() {
     return this.ingredients.slice();
@@ -23,10 +28,7 @@ export class GastosrealizadosmovizenService {
   addIngredient(ingredient: Ingredient) {
     this.ingredients.push(ingredient);
     this.ingredientsChanged.next(this.ingredients.slice());
-    localStorage.userName = "rdegges";
-    localStorage.setItem("ingredient", "ingredient");
-    alert(localStorage.userName + " really likes the color " + localStorage.ingredient);
-    localStorage.getItem("ingredient")
+
   }
 
 

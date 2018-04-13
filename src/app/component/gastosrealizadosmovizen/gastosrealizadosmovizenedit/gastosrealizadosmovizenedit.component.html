@@ -11,7 +11,6 @@
             class="form-control"
             name="Species"
             required
-            #s
             ngModel>
           </div>
         <br>
@@ -23,7 +22,6 @@
           class="form-control"
           name="Quantity"
           required
-          #q
           ngModel>
           </div>
         <div class="col-md-3 form-group">
@@ -34,7 +32,6 @@
             class="form-control"
             name="Price"
             required
-            #p
             ngModel>
         </div>
         <div class="col-md-3 form-group">
@@ -45,7 +42,6 @@
             class="form-control"
             name="Total"
             readonly
-            #t
             ngModel>
         </div>
       </div>
@@ -65,6 +61,11 @@
                     type="button"
                     (click)="onClear()"
             >Clear
+            </button>
+            <button class="btn btn-primary"
+                    type="button"
+                    (click)="getlocalstorage()"
+            >LocalStoreData
             </button>
           </div>
         </div>

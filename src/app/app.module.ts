@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import {routing} from "./router-M";
 import {GastosRealizadosM} from "./component/gastosrealizadosmovizen/gastosrealizados-M";
 import {GastosrealizadosmovizenService} from "./component/gastosrealizadosmovizen/gastosrealizadosmovizen.service";
+import {LocalStorageModule} from "angular-2-local-storage";
 
 
 
@@ -18,6 +19,7 @@ import {GastosrealizadosmovizenService} from "./component/gastosrealizadosmovize
     BrowserModule,
     routing,
     GastosRealizadosM,
+    LocalStorageModule
   ],
   providers: [
     GastosrealizadosmovizenService,
