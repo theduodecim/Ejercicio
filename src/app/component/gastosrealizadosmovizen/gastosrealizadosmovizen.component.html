@@ -38,7 +38,7 @@
         style="cursor: pointer"
         *ngFor="let ingredient of ingredients; let i = index"
         (click)="onEditItem(i)">
-        ({{ ingredient.Price }})
+        $ ({{ ingredient.Price }})
       </a>
     </td>
     <td>
@@ -47,7 +47,7 @@
         style="cursor: pointer"
         *ngFor="let ingredient of ingredients; let i = index"
         (click)="onEditItem(i)">
-        ({{ ingredient.Total }})
+        $ ({{ ingredient.Price * ingredient.Quantity }})
       </a>
     </td>
   </tr>

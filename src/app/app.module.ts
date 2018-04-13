@@ -6,6 +6,10 @@ import {GastosRealizadosM} from "./component/gastosrealizadosmovizen/gastosreali
 import {GastosrealizadosmovizenService} from "./component/gastosrealizadosmovizen/gastosrealizadosmovizen.service";
 
 
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,10 +17,10 @@ import {GastosrealizadosmovizenService} from "./component/gastosrealizadosmovize
   imports: [
     BrowserModule,
     routing,
-    GastosRealizadosM
+    GastosRealizadosM,
   ],
   providers: [
-    GastosrealizadosmovizenService
+    GastosrealizadosmovizenService,
   ],
   bootstrap: [AppComponent]
 })

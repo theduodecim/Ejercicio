@@ -9,6 +9,8 @@ import {GastosrealizadosmovizenService} from "./gastosrealizadosmovizen.service"
 })
 export class GastosrealizadosmovizenComponent implements OnInit {
 
+
+
   ingredients: Ingredient[];
   private subscribe: Subscription;
 
@@ -22,6 +24,7 @@ export class GastosrealizadosmovizenComponent implements OnInit {
           this.ingredients = ingredients;
         }
       );
+
   }
 
   onEditItem(index: number) {
@@ -31,6 +34,4 @@ export class GastosrealizadosmovizenComponent implements OnInit {
   ngOnDestroy() {
     this.subscribe.unsubscribe();
   }
-
-
 }

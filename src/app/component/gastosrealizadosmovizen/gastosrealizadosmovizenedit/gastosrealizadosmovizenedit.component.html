@@ -11,37 +11,41 @@
             class="form-control"
             name="Species"
             required
+            #s
             ngModel>
           </div>
         <br>
         <div class="col-md-3 form-group">
           <label for="Quantity">Cantidad</label>
           <input
-          type="text"
+          type="number"
           id="Quantity"
           class="form-control"
           name="Quantity"
           required
+          #q
           ngModel>
           </div>
         <div class="col-md-3 form-group">
-          <label for="Price">Precio</label>
+          <label for="Price">Precio($)</label>
           <input
-            type="text"
+            type="number"
             id="Price"
             class="form-control"
             name="Price"
             required
+            #p
             ngModel>
         </div>
         <div class="col-md-3 form-group">
-          <label for="Total">Total</label>
+          <label for="Total">Total($)</label>
           <input
-            type="text"
+            type="number"
             id="Total"
             class="form-control"
             name="Total"
-            required
+            readonly
+            #t
             ngModel>
         </div>
       </div>

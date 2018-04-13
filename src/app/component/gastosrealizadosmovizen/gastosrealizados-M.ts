@@ -12,6 +12,8 @@ import {GastosrealizadosmovizeneditComponent} from "./gastosrealizadosmovizenedi
   imports: [
     CommonModule,
     FormsModule,
+  ],
+  providers: [
   ]
 })
 
