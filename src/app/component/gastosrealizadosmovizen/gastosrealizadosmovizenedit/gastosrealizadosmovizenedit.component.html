@@ -1,0 +1,69 @@
+<div class="row">
+  <div class="col-md-10 pull-left">
+    <form (ngSubmit)="OnSubmit(f)" #f="ngForm">
+      <div class="row">
+        <div class="col-md-3 form-group">
+          <br>
+          <label for="Species">Especies</label>
+          <input
+            type="text"
+            id="Species"
+            class="form-control"
+            name="Species"
+            required
+            ngModel>
+          </div>
+        <br>
+        <div class="col-md-3 form-group">
+          <label for="Quantity">Cantidad</label>
+          <input
+          type="text"
+          id="Quantity"
+          class="form-control"
+          name="Quantity"
+          required
+          ngModel>
+          </div>
+        <div class="col-md-3 form-group">
+          <label for="Price">Precio</label>
+          <input
+            type="text"
+            id="Price"
+            class="form-control"
+            name="Price"
+            required
+            ngModel>
+        </div>
+        <div class="col-md-3 form-group">
+          <label for="Total">Total</label>
+          <input
+            type="text"
+            id="Total"
+            class="form-control"
+            name="Total"
+            required
+            ngModel>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <button class="btn btn-success"
+                    [disabled]="!f.valid"
+            >{{ editMode ? 'Update' : 'Add' }}
+            </button>
+            <button class="btn btn-danger"
+                    type="button"
+                    (click)="onDelete()"
+                    *ngIf="editMode"
+            >Delete
+            </button>
+            <button class="btn btn-primary"
+                    type="button"
+                    (click)="onClear()"
+            >Clear
+            </button>
+          </div>
+        </div>
+    </form>
+  </div>
+</div>

@@ -1,18 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
+import {routing} from "./router-M";
+import {GastosRealizadosM} from "./component/gastosrealizadosmovizen/gastosrealizados-M";
+import {GastosrealizadosmovizenService} from "./component/gastosrealizadosmovizen/gastosrealizadosmovizen.service";
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing,
+    GastosRealizadosM
   ],
-  providers: [],
+  providers: [
+    GastosrealizadosmovizenService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
