@@ -55,6 +55,7 @@ export class GastosrealizadosmovizeneditComponent implements OnInit {
     const newIngredient = new Ingredient(value.Species, value.Quantity, value.Price, value.Total);
     if (this.editMode) {
       this.gastosRealizadosMovizenService.updateIngredient(this.editedItemIndex, newIngredient);
+      this.onSaveData();
     } else {
       this.gastosRealizadosMovizenService.addIngredient(newIngredient);
       this.onSaveData()
